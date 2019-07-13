@@ -14,8 +14,4 @@ class Admin::Api::V1::BaseController < ActionController::API
                         User.new
                       end
   end
-
-  def four_oh_four
-    render file: 'public/404', status: 404
-  end
 end
