@@ -11,7 +11,6 @@ describe 'As a registered user' do
 
     expect(current_path).to eq(welcome_path)
     expect(page).to have_content('Thank you! Your account is now activated.')
-    binding.pry
   end
 
   it 'I cant confirm unrecognized token', :vcr do
