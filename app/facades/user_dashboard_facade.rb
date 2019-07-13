@@ -15,14 +15,14 @@ class UserDashboardFacade
   def followers
     followers_data = github_service.followers
     followers_data.map do |follower_data|
-      Person.new(follower_data)
+      Visitor.new(follower_data)
     end
   end
 
   def following
     followings_data = github_service.following
     followings_data.map do |following_data|
-      Person.new(following_data)
+      Visitor.new(following_data)
     end
   end
 

@@ -10,8 +10,8 @@ RSpec.describe UserDashboardFacade do
 
   it 'can tell if user is current friend' do
     user2 = create(:user, github_username: 'Vince')
-    visitor1 = Person.new({login: user2.github_username})
-    visitor2 = Person.new({login: 'Jason'})
+    visitor1 = Visitor.new(login: user2.github_username)
+    visitor2 = Visitor.new(login: 'Jason')
 
     @user1.friendships << user2
 
