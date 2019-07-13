@@ -58,5 +58,5 @@ Rails.application.routes.draw do
 
   resources :user_videos, only: %i[create destroy]
 
-  match "*path", to: "application#render_not_found", via: :all
+  match '*path', to: 'application#render_not_found', via: :all
 end
