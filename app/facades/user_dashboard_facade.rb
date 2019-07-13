@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+  # frozen_string_literal: true
 
 class UserDashboardFacade
   def initialize(user)
@@ -45,6 +45,11 @@ class UserDashboardFacade
     else
       bookmarked_videos[current_index - 1].tutorial_id
     end
+  end
+
+  def user_friend?(other_user)
+    @handles ||= user.all_friend_github_handles
+    @handles.include?(other_user.name)
   end
 
   private

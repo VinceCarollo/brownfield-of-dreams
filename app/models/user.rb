@@ -24,7 +24,11 @@ class User < ApplicationRecord
   has_secure_password
 
   def self.all_github_usernames
-    User.all.pluck(:github_username)
+    User.pluck(:github_username)
+  end
+
+  def all_friend_github_handles
+    friendships.pluck(:github_username)
   end
 
   private
