@@ -48,4 +48,4 @@ describe 'As a logged in user' do
       end
     end
   end
-end
+end 

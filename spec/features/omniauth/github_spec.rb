@@ -29,7 +29,7 @@ RSpec.describe 'Github Omniauth Authentication' do
     fill_in 'Password', with: user.password
 
     click_button 'Log In'
-    click_link 'Connect To Github'
+    click_button 'Connect To Github'
 
     within '#followers' do
       expect(page).to have_content('Followers')

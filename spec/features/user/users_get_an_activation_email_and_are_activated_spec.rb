@@ -11,6 +11,17 @@ describe 'As a registered user' do
 
     expect(current_path).to eq(welcome_path)
     expect(page).to have_content('Thank you! Your account is now activated.')
+
+    visit root_path
+
+    click_link 'Sign In'
+
+    fill_in "Email", with: user1.email
+    fill_in "Password", with: user1.password
+
+    click_button "Log In"
+
+    expect(page).to have_content("Status: Active")
   end
 
   it 'I cant confirm unrecognized token', :vcr do

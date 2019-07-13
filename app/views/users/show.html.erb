@@ -75,6 +75,6 @@
     </section>
 
   <% else %>
-    <%= link_to "Connect To Github", github_login_path %>
+    <%= button_to "Connect To Github", github_login_path, method: :get, class: 'mt2 btn btn-primary mb1 bg-teal' %>
   <% end %>
 </section>

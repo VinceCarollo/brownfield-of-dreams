@@ -34,7 +34,6 @@ class UserDashboardFacade
     @bookmarked_videos ||= @user.videos.order_by_tutorial_id
   end
 
-  # we need to refactor this method - too many queries
   def bookmarked_tutorial_title(id)
     Tutorial.find(id)
   end
@@ -55,6 +54,7 @@ class UserDashboardFacade
 
   def user_status
     @user.email_confirmed? ? 'Active' : 'Inactive'
+    
   end
 
   private
