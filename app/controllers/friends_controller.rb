@@ -6,7 +6,7 @@ class FriendsController < ApplicationController
     if user
       current_user.friendships << user
     else
-      flash[:notice] = "Friend not found."
+      flash[:notice] = 'Friend not found.'
     end
     redirect_to dashboard_path
   end

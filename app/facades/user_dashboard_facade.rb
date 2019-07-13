@@ -54,7 +54,6 @@ class UserDashboardFacade
 
   def user_status
     @user.email_confirmed? ? 'Active' : 'Inactive'
-    
   end
 
   private

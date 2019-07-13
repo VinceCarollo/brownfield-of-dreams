@@ -16,12 +16,12 @@ describe 'As a registered user' do
 
     click_link 'Sign In'
 
-    fill_in "Email", with: user1.email
-    fill_in "Password", with: user1.password
+    fill_in 'Email', with: user1.email
+    fill_in 'Password', with: user1.password
 
-    click_button "Log In"
+    click_button 'Log In'
 
-    expect(page).to have_content("Status: Active")
+    expect(page).to have_content('Status: Active')
   end
 
   it 'I cant confirm unrecognized token', :vcr do
