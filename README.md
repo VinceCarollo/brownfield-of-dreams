@@ -51,4 +51,4 @@ $ bundle exec rspec
 
 ## Production
 
-* [Heroku](https://bloc-toque-35099.herokuapp.com/) - The web framework used
+* [Heroku](https://bloc-toque-35099.herokuapp.com/)
