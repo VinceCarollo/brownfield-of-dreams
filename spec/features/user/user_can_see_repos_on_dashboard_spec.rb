@@ -32,7 +32,7 @@ describe 'As a logged in user' do
 
         visit '/dashboard'
 
-        expect(page).to have_content("Status: Active")
+        expect(page).to have_content('Status: Active')
       end
     end
 
@@ -44,7 +44,7 @@ describe 'As a logged in user' do
 
         visit '/dashboard'
 
-        expect(page).to have_content("Status: Inactive")
+        expect(page).to have_content('Status: Inactive')
       end
     end
   end
