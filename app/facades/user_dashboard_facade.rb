@@ -53,6 +53,10 @@ class UserDashboardFacade
     @handles.include?(other_user.name)
   end
 
+  def user_status
+    @user.email_confirmed? ? 'Active' : 'Inactive'
+  end
+
   private
 
   attr_reader :user
