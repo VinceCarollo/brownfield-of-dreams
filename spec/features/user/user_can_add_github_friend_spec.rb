@@ -14,11 +14,11 @@ describe 'As registered user' do
 
       within('#follower-1') do
         expect(page).to have_content(user2.github_username)
-        expect(page).to have_button('Add Friend')
+        expect(page).to have_link('Add Friend')
       end
 
       within('#follower-2') do
-        expect(page).to_not have_button('Add Friend')
+        expect(page).to_not have_link('Add Friend')
       end
     end
 
@@ -31,7 +31,7 @@ describe 'As registered user' do
       visit dashboard_path
 
       within('#follower-1') do
-        click_button 'Add Friend'
+        click_link 'Add Friend'
       end
 
       expect(current_path).to eq(dashboard_path)
