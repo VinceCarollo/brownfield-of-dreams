@@ -8,7 +8,6 @@
     <li> <%= current_user.first_name  %> <%= current_user.last_name %> </li>
     <li> <%= current_user.email%> </li>
   </ul>
-  <%= button_to "Send an Invite", invite_path, method: :get %>
   <section>
     <h1>Bookmarked Segments</h1>
       <section id='bookmarked-segments'>
@@ -22,7 +21,7 @@
         <% end %>
       </section>
   </section>
-
+  <%= button_to "Send an Invite", invite_path, method: :get, class: 'mt2 btn btn-primary mb1 bg-teal' %>
   <% if !current_user.github_token.nil? %>
     <section id='github'>
       <h2>GitHub</h2>
@@ -37,11 +36,13 @@
         <h4>Followers</h4>
         <% facade.followers.each_with_index do |follower, i| %>
           <section id="follower-<%= i + 1 %>">
-            <p> <%= link_to follower.name, follower.link %>
-            <% if current_user.friendships.find_by(github_username: follower.name) %> - friends
-              <% elsif facade.all_users.include?(follower.name)  %>  -
+            <p>
+              <%= link_to follower.name, follower.link %>
+              <% if current_user.friendships.find_by(github_username: follower.name) %>
+                friends
+              <% elsif facade.all_users.include?(follower.name)  %>
                 <%= button_to "Add Friend", friend_path(follower.name), method: :patch %>
-            <% end %>
+              <% end %>
             </p>
           </section>
         <% end %>

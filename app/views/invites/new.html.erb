@@ -1,5 +1,11 @@
-<%= form_tag :invite do %>
-  <%= label_tag "Github handle" %>
-  <%= text_field_tag :invite %>
-  <%= submit_tag "Send Invite" %>
-<% end %>
+<main id='user-invite-form'>
+  <section>
+    <%= form_tag :invite do %>
+    <div id='handle-field'>
+      <p><%= label_tag "Enter the Github Handle of who you would like to invite", nil, id: 'handle-label' %></p>
+      <%= text_field_tag :invite, nil, class: "block col-12 field" %>
+    </div>
+    <%= submit_tag "Send Invite", class: "mt2 btn btn-primary mb1 bg-teal" %>
+    <% end %>
+  </section>
+</main>
