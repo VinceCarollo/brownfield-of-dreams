@@ -56,5 +56,21 @@ RSpec.describe User, type: :model do
       expect(user.email_confirmed).to be true
       expect(user.confirm_token).to eq(nil)
     end
+
+    it '#all_friend_github_handles' do
+      user1 = create(:user, github_username: 'Github Username 1')
+      user2 = create(:user, github_username: 'Github Username 2')
+      user3 = create(:user, github_username: 'Github Username 3')
+      user4 = create(:user, github_username: 'Github Username 4')
+      user1.friendships << user2
+      user1.friendships << user3
+
+      handles = user1.all_friend_github_handles
+
+      expect(handles).to be_a Array
+      expect(handles).to include(user2.github_username)
+      expect(handles).to include(user3.github_username)
+      expect(handles).to_not include(user4.github_username)
+    end
   end
 end

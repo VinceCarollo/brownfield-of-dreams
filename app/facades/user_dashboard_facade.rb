@@ -15,14 +15,14 @@ class UserDashboardFacade
   def followers
     followers_data = github_service.followers
     followers_data.map do |follower_data|
-      Person.new(follower_data)
+      Visitor.new(follower_data)
     end
   end
 
   def following
     followings_data = github_service.following
     followings_data.map do |following_data|
-      Person.new(following_data)
+      Visitor.new(following_data)
     end
   end
 
@@ -45,6 +45,11 @@ class UserDashboardFacade
     else
       bookmarked_videos[current_index - 1].tutorial_id
     end
+  end
+
+  def user_friend?(other_user)
+    @handles ||= user.all_friend_github_handles
+    @handles.include?(other_user.name)
   end
 
   private

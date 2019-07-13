@@ -2,16 +2,16 @@
 
 require 'rails_helper'
 
-RSpec.describe Person do
+RSpec.describe Visitor do
   before :each do
-    @person = Person.new(
+    @person = Visitor.new(
       login: 'garth',
       html_url: 'www.google.com'
     )
   end
 
   it 'exists' do
-    expect(@person).to be_a Person
+    expect(@person).to be_a Visitor
   end
 
   it 'has attributes' do
