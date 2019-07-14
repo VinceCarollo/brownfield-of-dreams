@@ -44,9 +44,9 @@ $ bundle exec rspec
 
 ## Built With
 
-* [Rails](https://rubyonrails.org/) - The web framework used
-* [Bundler](https://bundler.io/) - Dependency Management
-* [Yarn](https://yarnpkg.com/en/) - Dependency Management
+* [Rails](https://rubyonrails.org/)
+* [Bundler](https://bundler.io/)
+* [Yarn](https://yarnpkg.com/en/)
 
 ## Authors
 
