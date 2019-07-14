@@ -1,7 +1,7 @@
 # Brown-Field
 
 This was a dive into inheriting a codebase that was poorly tested and organized. Some enhanchements:
-- Test coverage when from ~60% to 99%
+- Test coverage went from ~60% to 99%
 - Removed unnecessary routes and actions
 - Fixed all broken CRUD functionalities
 - Integrated VCR gem for all requests made in spec
