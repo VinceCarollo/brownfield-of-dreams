@@ -13,14 +13,18 @@ This was a dive into inheriting a codebase that was poorly tested and organized.
 
 ## Getting Started
 
-You will need a github key and secret, as well as a youtube api key to run this locally. We used figaro to store all keys in the environment.
+You will need a github key and secret, as well as a youtube api key to run this locally. We used figaro to store all keys in application.yml
+
 
 ### Installing
+
+Clone repo
 
 ```bash
 $ brew install node
 $ brew install yarn
 $ yarn add stimulus
+$ bundle install
 ```
 
 ### Data
@@ -51,4 +55,4 @@ $ bundle exec rspec
 
 ## Production
 
-* [Heroku](https://bloc-toque-35099.herokuapp.com/)
+* [Bloc Toque](https://bloc-toque-35099.herokuapp.com/)
